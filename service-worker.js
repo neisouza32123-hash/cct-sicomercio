@@ -1,4 +1,4 @@
-const CACHE="cct-sicomercio-25-26-v4";
+const CACHE="cct-sicomercio-25-26-v5";
 const ASSETS=["./","index.html","style.css","app.js","data.js","manifest.webmanifest","icon-192.png","icon-512.png","logo-sicomercio.png"];
 
 self.addEventListener("install", event => {
@@ -16,7 +16,6 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
   const req = event.request;
-
   if (req.mode === "navigate") {
     event.respondWith(
       fetch(req)
@@ -29,7 +28,6 @@ self.addEventListener("fetch", event => {
     );
     return;
   }
-
   event.respondWith(
     caches.match(req).then(cached => {
       const network = fetch(req)
