@@ -1,0 +1,21 @@
+CCT APP - SICOMERCIO FEIRA DE SANTANA 2025/2026
+
+Protótipo PWA estático, sem banco de dados e sem mensalidade obrigatória.
+
+ARQUIVOS PRINCIPAIS
+- index.html: tela principal
+- data.js: conteúdo pesquisável das cláusulas
+- style.css / app.js: aparência e funções
+- manifest.webmanifest + service-worker.js: instalação como app/PWA
+- cct-oficial.pdf: PDF original para conferência
+
+COMO TESTAR NO COMPUTADOR
+Abra um terminal dentro desta pasta e rode um servidor HTTP simples, por exemplo:
+python -m http.server 8080
+Depois acesse http://localhost:8080 no navegador.
+
+PARA INSTALAR NO CELULAR
+Hospede esta pasta em um endereço HTTPS (GitHub Pages, Cloudflare Pages ou hospedagem do sindicato). Depois abra o endereço no Chrome/Edge/Safari e use 'Adicionar à tela inicial'.
+
+OBSERVAÇÃO
+O conteúdo foi convertido automaticamente a partir da CCT Mobile 2025/2026. Antes de publicar oficialmente, recomenda-se uma conferência jurídica final do texto convertido em relação ao PDF assinado/registrado.
