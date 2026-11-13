@@ -1,5 +1,5 @@
-const CACHE="cct-sicomercio-25-26-v5";
-const ASSETS=["./","index.html","style.css","app.js","data.js","manifest.webmanifest","icon-192.png","icon-512.png","logo-sicomercio.png"];
+const CACHE="cct-sicomercio-26-27-v1";
+const ASSETS=["./","index.html","manifest.webmanifest","icon-192.png","icon-512.png","logo-sicomercio.png"];
 
 self.addEventListener("install", event => {
   self.skipWaiting();
@@ -9,7 +9,7 @@ self.addEventListener("install", event => {
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => k.startsWith("cct-sicomercio-") && k !== CACHE).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
